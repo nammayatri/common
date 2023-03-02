@@ -21,7 +21,9 @@ in
 {
   perSystem = { pkgs, lib, config, ... }: {
     haskellProjects.ghc810 = {
+      # This is not a local project, so disable those options.
       packages = { };
+      devShell.enable = false;
 
       # NammaYatri is not upgraded to 9.2 yet (could take weeks per Hemant)
       # We can't use 884, because that's broken in nixpkgs. So 8.10 it is.
