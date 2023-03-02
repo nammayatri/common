@@ -1,5 +1,5 @@
 common:
-{ pkgs, lib, config, ... }:
+{ self, ... }:
 
 {
   _file = __curPos.file;
