@@ -8,5 +8,6 @@
   };
   outputs = inputs: {
     flakeModule = import ./flake-module.nix { inherit inputs; };
+    haskellFlakeProjectModules.ghc810 = ./ghc810.nix;
   };
 }
