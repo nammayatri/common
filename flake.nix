@@ -1,9 +1,5 @@
 {
   outputs = {
-    flakeModules.default = { ... }: {
-      imports = [
-        ./nix/treefmt.nix
-      ];
-    };
+    flakeModules.default = ./nix/treefmt.nix;
   };
 }
