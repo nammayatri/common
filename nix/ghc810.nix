@@ -1,3 +1,8 @@
+# To use this package set in your `haskell-flake` projects, set the
+# `basePackages` option as follows:
+# 
+# > basePackages = config.haskellProjects.ghc810.outputs.finalPackages;
+#
 { self, lib, ... }:
 
 let
