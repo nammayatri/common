@@ -2,6 +2,7 @@ common:
 { pkgs, lib, config, ... }:
 
 {
+  _file = __curPos.file;
   perSystem = { pkgs, lib, config, ... }: {
     haskellProjects.default = {
       imports = [
