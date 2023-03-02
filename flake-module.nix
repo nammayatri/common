@@ -3,14 +3,8 @@ common:
 
 {
   imports = [
-    (import ./nix/treefmt.nix common)
     common.inputs.flake-root.flakeModule
+    (import ./nix/treefmt.nix common)
+    (import ./nix/haskell.nix common)
   ];
-  perSystem = { self', config, ... }: {
-    haskellProjects.default = {
-      imports = [
-        (import ./nix/haskell.nix (common // { perSystemConfig = config; }))
-      ];
-    };
-  };
 }
