@@ -1,4 +1,3 @@
-common:
 { self, lib, ... }:
 
 let
@@ -15,7 +14,6 @@ let
       (f self super);
 in
 {
-  _file = __curPos.file;
   perSystem = { pkgs, lib, config, ... }: {
     haskellProjects.ghc810 = {
       packages = { };
