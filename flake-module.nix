@@ -9,7 +9,7 @@ common:
   perSystem = { self', config, ... }: {
     haskellProjects.default = {
       imports = [
-        (import ./nix/haskell.nix (common // { inherit config; }))
+        (import ./nix/haskell.nix common)
       ];
     };
   };
