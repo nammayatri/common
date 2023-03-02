@@ -1,5 +1,5 @@
 common:
-{ self, inputs, ... }:
+{ self, ... }:
 
 {
   _file = __curPos.file;
