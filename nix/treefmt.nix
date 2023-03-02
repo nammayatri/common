@@ -26,6 +26,13 @@ common:
           ];
         };
       };
+
+      # Add it to the default Haskell project shell.
+      haskellProjects.default = {
+        devShell.tools = _: {
+          treefmt = config.treefmt.build.wrapper;
+        } // config.treefmt.build.programs;
+      };
     };
   };
 }
