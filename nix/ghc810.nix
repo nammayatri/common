@@ -18,6 +18,8 @@ in
   _file = __curPos.file;
   perSystem = { pkgs, lib, config, ... }: {
     haskellProjects.ghc810 = {
+      packages = { };
+
       # NammaYatri is not upgraded to 9.2 yet (could take weeks per Hemant)
       # We can't use 884, because that's broken in nixpkgs. So 8.10 it is.
       basePackages = pkgs.haskell.packages.ghc8107;
