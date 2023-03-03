@@ -10,7 +10,14 @@ common:
     ./nix/ghc810.nix
     common.inputs.cachix-push.flakeModule
   ];
-  perSystem = { ... }: {
+  perSystem = { system, ... }: {
     cachix-push.cacheName = "nammayatri";
+
+    # Remove this after fixing
+    # https://github.com/nammayatri/nammayatri/issues/13
+    _module.args.pkgs = import inputs.nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
   };
 }
