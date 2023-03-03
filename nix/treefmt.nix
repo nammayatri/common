@@ -3,6 +3,9 @@ common:
 
 {
   _file = __curPos.file;
+  imports = [
+    common.inputs.treefmt-nix.flakeModule
+  ];
   perSystem = { self', config, pkgs, lib, system, ... }: {
     treefmt.config = {
       inherit (config.flake-root) projectRootFile;
