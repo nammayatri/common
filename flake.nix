@@ -9,6 +9,9 @@
     cachix-push.url = "github:juspay/cachix-push";
   };
   outputs = inputs: {
-    flakeModule = import ./flake-module.nix { inherit inputs; };
+    flakeModules = {
+      default = import ./flake-module.nix { inherit inputs; };
+      ghc810 = ./nix/ghc810.nix;
+    };
   };
 }
