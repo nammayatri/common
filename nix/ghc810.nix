@@ -33,6 +33,7 @@ in
         # Dependencies from Hackage
         aeson = "1.5.6.0";
         dhall = "1.35.0";
+        esqueleto = "3.5.2.0";
         geojson = "4.0.4";
         http2 = "3.0.2";
         jwt = "0.10.0";
@@ -65,6 +66,7 @@ in
         amazonka-core = [ unmarkBroken dontCheck doJailbreak ];
         binary-parsers = [ unmarkBroken ];
         dhall = [ dontCheck doJailbreak ];
+        esqueleto = [ dontCheck ];
         geojson = [ dontCheck ];
         http2 = [ dontCheck ];
         jwt = [ dontCheck doJailbreak ];
