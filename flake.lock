@@ -160,15 +160,16 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1677433127,
-        "narHash": "sha256-vafj2WbhrlnwkU20yRDqtHFTUJIEygPfxJVswB3dJ9U=",
-        "owner": "numtide",
+        "lastModified": 1679418601,
+        "narHash": "sha256-URkRSunu8HAp2vH2KgLogjAXckiufCDFrBs59g9uiLY=",
+        "owner": "srid",
         "repo": "treefmt-nix",
-        "rev": "f7fcf3770c6cec6fd5f995ba94e6e6376019b9ff",
+        "rev": "34180b128d23d4896a79fa87497bbefd400c6083",
         "type": "github"
       },
       "original": {
-        "owner": "numtide",
+        "owner": "srid",
+        "ref": "patch-1",
         "repo": "treefmt-nix",
         "type": "github"
       }
