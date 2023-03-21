@@ -5,6 +5,7 @@ common:
   imports = [
     common.inputs.flake-root.flakeModule
     common.inputs.haskell-flake.flakeModule
+    common.inputs.check-flake.flakeModule
     (import ./nix/treefmt.nix common)
     (import ./nix/haskell.nix common)
     ./nix/ghc810.nix
