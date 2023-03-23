@@ -18,11 +18,6 @@ common:
             ghcid
             ;
         };
-        mkShellArgs.shellHook = ''
-          ${lib.getExe config.flake-root.package}
-          # Re-generate .cabal files so HLS will work (per hie.yaml)
-          time ${pkgs.findutils}/bin/find -name package.yaml -exec hpack {} \;
-        '';
       };
     };
   };
