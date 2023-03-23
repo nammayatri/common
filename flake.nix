@@ -6,7 +6,7 @@
     flake-root.url = "github:srid/flake-root";
     nixpkgs-21_11.url = "github:nixos/nixpkgs/nixos-21.11"; # Used for ormolu
     nixpkgs-140774-workaround.url = "github:srid/nixpkgs-140774-workaround";
-    treefmt-nix.url = "github:srid/treefmt-nix/patch-1"; # https://github.com/numtide/treefmt-nix/pull/54
+    treefmt-nix.url = "github:numtide/treefmt-nix";
     cachix-push.url = "github:juspay/cachix-push";
   };
   outputs = inputs: {
