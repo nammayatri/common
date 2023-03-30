@@ -35,6 +35,10 @@ in
         dhall = "1.35.0";
         esqueleto = "3.5.2.0";
         geojson = "4.0.4";
+        hspec = "2.7.6";
+        hspec-core = "2.7.6";
+        hspec-discover = "2.7.6";
+        hspec-meta = "2.6.0";
         http2 = "3.0.2";
         jwt = "0.10.0";
         lens = "4.19.2";
@@ -53,6 +57,7 @@ in
         servant-server = "0.18.1";
         singletons = "2.6";
         streamly = "0.7.3.1";
+        tasty-hspec = "1.1.6";
         th-desugar = "1.10";
         universum = "1.6.1";
       };
@@ -68,6 +73,7 @@ in
         dhall = [ dontCheck doJailbreak ];
         esqueleto = [ dontCheck ];
         geojson = [ dontCheck ];
+        hex-text = [ dontCheck ];
         http2 = [ dontCheck ];
         jwt = [ dontCheck doJailbreak ];
         lens = [ dontCheck doJailbreak ];
