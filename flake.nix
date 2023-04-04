@@ -8,6 +8,12 @@
     nixpkgs-140774-workaround.url = "github:srid/nixpkgs-140774-workaround";
     treefmt-nix.url = "github:numtide/treefmt-nix";
     cachix-push.url = "github:juspay/cachix-push";
+
+    # nixpkgs overrides
+    # https://github.com/juspay/nixpkgs/pull/1
+    nixpkgs-osrm.url = "github:juspay/nixpkgs/osrm-backend";
+    # https://github.com/hercules-ci/arion/pull/192
+    arion.url = "github:srid/arion/patch-1";
   };
   outputs = inputs: {
     flakeModules = {

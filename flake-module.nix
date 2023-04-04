@@ -11,7 +11,7 @@ common:
     ./nix/ghc810.nix
     common.inputs.cachix-push.flakeModule
   ];
-  perSystem = { system, ... }: {
+  perSystem = { system, inputs', ... }: {
     cachix-push.cacheName = "nammayatri";
 
     # Remove this after fixing
@@ -19,6 +19,12 @@ common:
     _module.args.pkgs = import inputs.nixpkgs {
       inherit system;
       config.allowUnfree = true;
+      overlays = [
+        (self: super: {
+          arion = common.inputs.arion.packages.${system}.arion;
+          osrm-backend = common.inputs.nixpkgs-osrm.legacyPackages.${system}.osrm-backend;
+        })
+      ];
     };
   };
 }
