@@ -203,11 +203,11 @@
     },
     "nixpkgs-osrm": {
       "locked": {
-        "lastModified": 1680556136,
-        "narHash": "sha256-W8FaCsXKC6HBJOdved0kND8EhdK2ofyApt2kRfy7lxg=",
+        "lastModified": 1680727908,
+        "narHash": "sha256-ox2WeuC3uOF3V7W/SBXmxECBhq4bqItalEJqRm+wiHc=",
         "owner": "juspay",
         "repo": "nixpkgs",
-        "rev": "bc35385153ebf3648206a1f260309a675ebfcf2e",
+        "rev": "21752064fd72298d3df883cf718548ef4983ceb4",
         "type": "github"
       },
       "original": {
