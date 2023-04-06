@@ -9,6 +9,10 @@
     treefmt-nix.url = "github:numtide/treefmt-nix";
     cachix-push.url = "github:juspay/cachix-push";
 
+    # Commonly useful flakes
+    mission-control.url = "github:Platonic-Systems/mission-control";
+    process-compose-flake.url = "github:Platonic-Systems/process-compose-flake";
+
     # nixpkgs overrides
     # https://github.com/juspay/nixpkgs/pull/1
     nixpkgs-osrm.url = "github:juspay/nixpkgs/osrm-backend";

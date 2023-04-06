@@ -10,6 +10,8 @@ common:
     (import ./nix/haskell.nix common)
     ./nix/ghc810.nix
     common.inputs.cachix-push.flakeModule
+    common.inputs.mission-control.flakeModule
+    common.inputs.process-compose-flake.flakeModule
   ];
   perSystem = { system, inputs', ... }: {
     cachix-push.cacheName = "nammayatri";
