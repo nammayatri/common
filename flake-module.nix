@@ -24,7 +24,6 @@ common:
       overlays = [
         (self: super: {
           arion = common.inputs.arion.packages.${system}.arion;
-          osrm-backend = common.inputs.nixpkgs-osrm.legacyPackages.${system}.osrm-backend;
         })
       ];
     };

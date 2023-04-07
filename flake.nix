@@ -14,8 +14,6 @@
     process-compose-flake.url = "github:Platonic-Systems/process-compose-flake";
 
     # nixpkgs overrides
-    # https://github.com/juspay/nixpkgs/pull/1
-    nixpkgs-osrm.url = "github:juspay/nixpkgs/osrm-backend";
     # https://github.com/hercules-ci/arion/pull/192
     arion.url = "github:srid/arion/patch-1";
   };
