@@ -36,21 +36,6 @@
         "type": "github"
       }
     },
-    "check-flake": {
-      "locked": {
-        "lastModified": 1662502605,
-        "narHash": "sha256-jAT55UhabAxLAVGanxjnNdzH2/oX2ZjLsL4i2jPIP+g=",
-        "owner": "srid",
-        "repo": "check-flake",
-        "rev": "48a17393ed4fcd523399d6602c283775b5127295",
-        "type": "github"
-      },
-      "original": {
-        "owner": "srid",
-        "repo": "check-flake",
-        "type": "github"
-      }
-    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -267,7 +252,6 @@
       "inputs": {
         "arion": "arion",
         "cachix-push": "cachix-push",
-        "check-flake": "check-flake",
         "flake-parts": "flake-parts_2",
         "flake-root": "flake-root",
         "haskell-flake": "haskell-flake_2",
