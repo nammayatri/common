@@ -11,6 +11,7 @@ common:
     common.inputs.cachix-push.flakeModule
     common.inputs.mission-control.flakeModule
     common.inputs.process-compose-flake.flakeModule
+    common.inputs.pre-commit-hooks-nix.flakeModule
   ];
   perSystem = { system, inputs', ... }: {
     cachix-push.cacheName = "nammayatri";
@@ -26,6 +27,17 @@ common:
           osrm-backend = common.inputs.nixpkgs-osrm.legacyPackages.${system}.osrm-backend;
         })
       ];
+    };
+
+    pre-commit = {
+      check.enable = true;
+      settings = {
+        hooks = {
+          treefmt.enable = true;
+          nil.enable = true;
+          hpack.enable = true;
+        };
+      };
     };
   };
 }

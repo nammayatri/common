@@ -1,7 +1,8 @@
 {
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
-    haskell-flake.url = "github:srid/haskell-flake";
+    # https://github.com/srid/haskell-flake/pull/137
+    haskell-flake.url = "github:sbh69840/haskell-flake/poc-localapps";
     flake-root.url = "github:srid/flake-root";
     nixpkgs-21_11.url = "github:nixos/nixpkgs/nixos-21.11"; # Used for ormolu
     nixpkgs-140774-workaround.url = "github:srid/nixpkgs-140774-workaround";
@@ -11,6 +12,8 @@
     # Commonly useful flakes
     mission-control.url = "github:Platonic-Systems/mission-control";
     process-compose-flake.url = "github:Platonic-Systems/process-compose-flake";
+    # - https://github.com/cachix/pre-commit-hooks.nix/pull/271
+    pre-commit-hooks-nix.url = "github:juspay/pre-commit-hooks.nix/find-gitdir";
 
     # nixpkgs overrides
     # https://github.com/juspay/nixpkgs/pull/1
