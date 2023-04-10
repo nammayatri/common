@@ -8,6 +8,7 @@ common:
     (import ./nix/treefmt.nix common)
     (import ./nix/haskell.nix common)
     ./nix/ghc810.nix
+    ./nix/pre-commit.nix
     common.inputs.cachix-push.flakeModule
     common.inputs.mission-control.flakeModule
     common.inputs.process-compose-flake.flakeModule
@@ -27,17 +28,6 @@ common:
           osrm-backend = common.inputs.nixpkgs-osrm.legacyPackages.${system}.osrm-backend;
         })
       ];
-    };
-
-    pre-commit = {
-      check.enable = true;
-      settings = {
-        hooks = {
-          treefmt.enable = true;
-          nil.enable = true;
-          hpack.enable = true;
-        };
-      };
     };
   };
 }
