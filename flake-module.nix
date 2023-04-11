@@ -14,7 +14,7 @@ common:
     common.inputs.process-compose-flake.flakeModule
     common.inputs.pre-commit-hooks-nix.flakeModule
   ];
-  perSystem = { system, inputs', ... }: {
+  perSystem = { system, inputs', lib, ... }: {
     cachix-push.cacheName = "nammayatri";
 
     # Remove this after fixing
@@ -29,5 +29,7 @@ common:
         })
       ];
     };
+
+    process-compose.configs = lib.mkDefault { };
   };
 }

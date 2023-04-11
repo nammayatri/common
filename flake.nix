@@ -11,8 +11,7 @@
 
     # Commonly useful flakes
     mission-control.url = "github:Platonic-Systems/mission-control";
-    # https://github.com/Platonic-Systems/process-compose-flake/pull/8
-    process-compose-flake.url = "github:Platonic-Systems/process-compose-flake/srid/import-without-use";
+    process-compose-flake.url = "github:Platonic-Systems/process-compose-flake";
     pre-commit-hooks-nix.url = "github:cachix/pre-commit-hooks.nix";
 
     # nixpkgs overrides
