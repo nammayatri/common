@@ -13,8 +13,7 @@
     mission-control.url = "github:Platonic-Systems/mission-control";
     # https://github.com/Platonic-Systems/process-compose-flake/pull/8
     process-compose-flake.url = "github:Platonic-Systems/process-compose-flake/srid/import-without-use";
-    # - https://github.com/cachix/pre-commit-hooks.nix/pull/271
-    pre-commit-hooks-nix.url = "github:juspay/pre-commit-hooks.nix/find-gitdir";
+    pre-commit-hooks-nix.url = "github:cachix/pre-commit-hooks.nix";
 
     # nixpkgs overrides
     # https://github.com/juspay/nixpkgs/pull/1

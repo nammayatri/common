@@ -450,16 +450,15 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1681174115,
-        "narHash": "sha256-kYfL38Qr/EsiO2gny/BZYwQDiIeiy1HV1d+lcI3nDNU=",
-        "owner": "juspay",
+        "lastModified": 1681206676,
+        "narHash": "sha256-6hQR0fSJ22BSV1XpjyxYur/MPab6gn3aI/l8qEpwNHk=",
+        "owner": "cachix",
         "repo": "pre-commit-hooks.nix",
-        "rev": "376c81237fbcadfda5cf40866d168ed4feb6fed6",
+        "rev": "a0e9703a95342d1dba4ba0d989b2e0b429d42516",
         "type": "github"
       },
       "original": {
-        "owner": "juspay",
-        "ref": "find-gitdir",
+        "owner": "cachix",
         "repo": "pre-commit-hooks.nix",
         "type": "github"
       }
