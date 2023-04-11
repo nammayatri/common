@@ -9,6 +9,7 @@ common:
     (import ./nix/haskell.nix common)
     ./nix/ghc810.nix
     ./nix/pre-commit.nix
+    ./nix/arion.nix
     common.inputs.cachix-push.flakeModule
     common.inputs.mission-control.flakeModule
     common.inputs.process-compose-flake.flakeModule
