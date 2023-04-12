@@ -15,7 +15,7 @@
     pre-commit-hooks-nix.url = "github:cachix/pre-commit-hooks.nix";
 
     # nixpkgs overrides
-    # https://github.com/juspay/nixpkgs/pull/1
+    # https://github.com/NixOS/nixpkgs/pull/225008
     nixpkgs-osrm.url = "github:juspay/nixpkgs/osrm-backend";
     # https://github.com/hercules-ci/arion/pull/192
     arion.url = "github:srid/arion/patch-1";
