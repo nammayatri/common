@@ -15,7 +15,7 @@ in
     perSystem = mkPerSystemOption
       ({ config, self', pkgs, system, ... }: {
         options = {
-          dockerComposeConfiguration = mkOption {
+          arionProjectConfiguration = mkOption {
             type = types.nullOr types.deferredModule;
             default = null;
             description = ''
@@ -29,12 +29,12 @@ in
         };
         config = {
           packages =
-            lib.optionalAttrs (config.dockerComposeConfiguration != null) {
+            lib.optionalAttrs (config.arionProjectConfiguration != null) {
               arion =
                 let
                   dcYaml = pkgs.arion.passthru.build {
                     modules = [
-                      config.dockerComposeConfiguration
+                      config.arionProjectConfiguration
                     ];
                   };
                 in
