@@ -27,6 +27,8 @@ common:
           "-fplugin=RecordDotPreprocessor"
         ];
       };
+
+      programs.dhall.enable = true;
     };
 
     # Add it to the default Haskell project shell.
