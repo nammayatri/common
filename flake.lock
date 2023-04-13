@@ -261,6 +261,21 @@
         "type": "github"
       }
     },
+    "nixpkgs-140774-workaround": {
+      "locked": {
+        "lastModified": 1678736468,
+        "narHash": "sha256-l5BdAeq9ymhUox0sTqeKibx9zkreWbIllwTvCamJLE8=",
+        "owner": "srid",
+        "repo": "nixpkgs-140774-workaround",
+        "rev": "335c2052970106d8f09f6f7f522f29d6ccaa2416",
+        "type": "github"
+      },
+      "original": {
+        "owner": "srid",
+        "repo": "nixpkgs-140774-workaround",
+        "type": "github"
+      }
+    },
     "nixpkgs-21_11": {
       "locked": {
         "lastModified": 1659446231,
@@ -472,6 +487,7 @@
         "haskell-flake": "haskell-flake_2",
         "mission-control": "mission-control",
         "nixpkgs": "nixpkgs_4",
+        "nixpkgs-140774-workaround": "nixpkgs-140774-workaround",
         "nixpkgs-21_11": "nixpkgs-21_11",
         "pre-commit-hooks-nix": "pre-commit-hooks-nix",
         "process-compose-flake": "process-compose-flake",

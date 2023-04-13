@@ -16,7 +16,9 @@ common:
       # programs.hlint.enable = true;
       programs.ormolu.enable = true;
 
-      programs.ormolu.package = common.inputs.nixpkgs-21_11.legacyPackages.${system}.haskellPackages.ormolu;
+      programs.ormolu.package = 
+        let pkgs-21_11 = common.inputs.nixpkgs-21_11.legacyPackages.${system};
+        in common.inputs.nixpkgs-140774-workaround.patch pkgs-21_11 pkgs-21_11.haskellPackages.ormolu;
       settings.formatter.ormolu = {
         options = [
           "--ghc-opt"
