@@ -12,6 +12,7 @@
           nil.enable = true;
           hpack.enable = true;
           nix-flake-lock.enable = true;
+          statix.enable = true;
 
           # Custom hooks
           trailing-ws = {
