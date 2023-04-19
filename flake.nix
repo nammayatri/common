@@ -15,7 +15,7 @@
     # Commonly useful flakes
     mission-control.url = "github:Platonic-Systems/mission-control";
     process-compose-flake.url = "github:Platonic-Systems/process-compose-flake";
-    pre-commit-hooks-nix.url = "github:cachix/pre-commit-hooks.nix";
+    pre-commit-hooks-nix.url = "github:srid/pre-commit-hooks.nix/nix-flake-lock"; # https://github.com/cachix/pre-commit-hooks.nix/pull/283
 
     # nixpkgs overrides
     # https://github.com/hercules-ci/arion/pull/192
