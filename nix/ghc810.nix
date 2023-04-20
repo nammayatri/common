@@ -24,6 +24,7 @@ in
       # This is not a local project, so disable those options.
       packages = { };
       devShell.enable = false;
+      autoWire = [ ];
 
       # NammaYatri is not upgraded to 9.2 yet (could take weeks per Hemant)
       # We can't use 884, because that's broken in nixpkgs. So 8.10 it is.
