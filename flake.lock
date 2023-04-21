@@ -26,11 +26,11 @@
         "flake-outputs": "flake-outputs"
       },
       "locked": {
-        "lastModified": 1681148790,
-        "narHash": "sha256-yIJ+gbQ9d71vnilo0LsqsdMfYprMMH+QIiD3DoCJDWw=",
+        "lastModified": 1682091628,
+        "narHash": "sha256-+NCKZnopFp+7A1zMdtoGUYN4T1SpywJU3cPMUe5dAA8=",
         "owner": "juspay",
         "repo": "cachix-push",
-        "rev": "dc55f7833dc937a4d3fad2108c1f9cd3933df974",
+        "rev": "7463e5db6b56f29a6a7f040ce34a16b00fe950b1",
         "type": "github"
       },
       "original": {
