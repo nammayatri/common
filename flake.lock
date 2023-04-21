@@ -449,11 +449,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1682083743,
-        "narHash": "sha256-39EGzZ6ilTz/uEYs/158uxDPwzYA9sdScsxycWGGzHk=",
+        "lastModified": 1682084120,
+        "narHash": "sha256-eOnSvnUETVIdLRDlmbf3NF7kN1TK0OTLoFLO8eFjFRY=",
         "owner": "srid",
         "repo": "pre-commit-hooks.nix",
-        "rev": "7340f83eba1ffc94e05ca4224dd4d5e4b2ec8c62",
+        "rev": "93b4cb68eee67a13bfe3641e196f4e1d3c64a888",
         "type": "github"
       },
       "original": {
