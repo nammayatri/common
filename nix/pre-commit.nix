@@ -11,7 +11,8 @@
           treefmt.enable = true;
           nil.enable = true;
           hpack.enable = true;
-          nix-flake-lock.enable = true;
+          # FIXME: Disabled due to purity issues
+          # nix-flake-lock.enable = true;
           statix.enable = true;
 
           # Custom hooks
