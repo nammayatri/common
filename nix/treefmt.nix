@@ -15,7 +15,7 @@ common:
       # FIXME: Disabled until https://github.com/nammayatri/nammayatri/issues/31
       # programs.hlint.enable = true;
       programs.ormolu.enable = true;
-      programs.ormolu.package = pkgs.haskellPackages.ormolu_0_2_0_0;
+      programs.ormolu.package = pkgs.haskellPackages.ormolu_0_1_4_1;
 
       settings.formatter.ormolu = {
         options = [
