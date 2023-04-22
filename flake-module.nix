@@ -23,11 +23,6 @@ common:
     _module.args.pkgs = import inputs.nixpkgs {
       inherit system;
       config.allowUnfree = true;
-      overlays = [
-        (self: super: {
-          arion = common.inputs.arion.packages.${system}.arion;
-        })
-      ];
     };
 
     process-compose.configs = lib.mkDefault { };
