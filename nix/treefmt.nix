@@ -8,6 +8,7 @@ common:
   ];
   perSystem = { self', config, pkgs, lib, system, ... }: {
     treefmt = {
+      flakeCheck = false; # Because, we use pre-commit-hooks.nix
       config = {
         inherit (config.flake-root) projectRootFile;
         package = pkgs.treefmt;
