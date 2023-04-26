@@ -8,10 +8,11 @@ common:
   ];
   perSystem = { self', config, pkgs, lib, system, ... }: {
     treefmt = {
-      flakeCheck = false; # Because, we use pre-commit-hooks.nix
       config = {
         inherit (config.flake-root) projectRootFile;
         package = pkgs.treefmt;
+
+        flakeCheck = false; # Because, we use pre-commit-hooks.nix
 
         programs.nixpkgs-fmt.enable = true;
         # FIXME: Disabled until https://github.com/nammayatri/nammayatri/issues/31
