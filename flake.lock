@@ -28,11 +28,11 @@
         "devour-flake": "devour-flake"
       },
       "locked": {
-        "lastModified": 1682366631,
-        "narHash": "sha256-qydDydY/IHZORemrfR9ssmBYmuir+saKZb/yd7Q4BBs=",
+        "lastModified": 1682525738,
+        "narHash": "sha256-/5KmYVp5Zi8AEHB2wUaalcBcEE1y9VasrEePMRQll9k=",
         "owner": "juspay",
         "repo": "cachix-push",
-        "rev": "8d04edca62656e0f85647a1bf2f2118b5498163a",
+        "rev": "fa498c2bb2af817e7e550cda3810ec4a46c5c576",
         "type": "github"
       },
       "original": {
