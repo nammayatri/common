@@ -9,11 +9,11 @@
       settings = {
         hooks = {
           treefmt.enable = true;
-          nil.enable = true;
+          nil.enable = lib.mkDefault true;
           hpack.enable = true;
           # FIXME: Disabled due to purity issues
           # nix-flake-lock.enable = true;
-          statix.enable = true;
+          statix.enable = lib.mkDefault true;
 
           # Custom hooks
           trailing-ws = {
