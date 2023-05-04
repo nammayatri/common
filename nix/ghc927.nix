@@ -27,6 +27,13 @@ in
       autoWire = [ ];
 
       # Uses GHC-9.2.7 package set as base
+
+      # We use a versioned package-set instead of the more
+      # general `pkgs.haskellPackages` set in order to be
+      # more explicit about our intentions to use a
+      # specific GHC version and by extension the related
+      # packages versions that come with this snapshot
+
       basePackages = pkgs.haskell.packages.ghc927;
 
       source-overrides = {
