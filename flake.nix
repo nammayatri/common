@@ -19,7 +19,8 @@
   outputs = inputs: {
     flakeModules = {
       default = import ./flake-module.nix { inherit inputs; };
-      ghc810 = ./nix/ghc810.nix;
+      # ghc810 = ./nix/ghc810.nix;
+      ghc927 = ./nix/ghc927.nix;
     };
   };
 }
