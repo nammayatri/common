@@ -5,7 +5,7 @@ common:
   _file = __curPos.file;
   perSystem = { pkgs, lib, config, ... }: {
     haskellProjects.default = {
-      basePackages = config.haskellProjects.ghc810.outputs.finalPackages;
+      basePackages = config.haskellProjects.ghc927.outputs.finalPackages;
       devShell = {
         tools = hp: {
           inherit (pkgs.haskellPackages)
