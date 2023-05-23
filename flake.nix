@@ -22,5 +22,16 @@
       default = import ./flake-module.nix { inherit inputs; };
       ghc810 = ./nix/ghc810.nix;
     };
+
+    lib.mkFlake = args: mod:
+      inputs.flake-parts.lib.mkFlake
+        { inputs = args.inputs // { inherit (inputs) nixpkgs; }; }
+        {
+          systems = import inputs.systems;
+          imports = [
+            inputs.self.flakeModules.default
+            mod
+          ];
+        };
   };
 }
