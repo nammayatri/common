@@ -4,7 +4,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
-    haskell-flake.url = "github:srid/haskell-flake/0.3.0";
+    haskell-flake.url = "github:srid/haskell-flake";
     systems.url = "github:nix-systems/default";
     flake-root.url = "github:srid/flake-root";
     nixpkgs-21_11.url = "github:nixos/nixpkgs/nixos-21.11"; # Used for ormolu

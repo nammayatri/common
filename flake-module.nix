@@ -2,11 +2,12 @@ common:
 { self, inputs, ... }:
 
 {
+  _file = __curPos.file;
   imports = [
     common.inputs.flake-root.flakeModule
     common.inputs.haskell-flake.flakeModule
     (import ./nix/treefmt.nix common)
-    (import ./nix/haskell.nix common)
+    ./nix/haskell
     ./nix/ghc810.nix
     ./nix/pre-commit.nix
     ./nix/arion.nix
