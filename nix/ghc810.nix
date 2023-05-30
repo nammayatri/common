@@ -3,26 +3,13 @@
 # 
 # > basePackages = config.haskellProjects.ghc810.outputs.finalPackages;
 #
-{ self, lib, ... }:
-
-let
-  # A function that enables us to write `foo = [ dontCheck ]` instead of `foo =
-  # lib.pipe super.foo [ dontCheck ]` in haskell-flake's `overrides`.
-  compilePipe = f: self: super:
-    lib.mapAttrs
-      (name: value:
-        if lib.isList value then
-          lib.pipe super.${name} value
-        else
-          value
-      )
-      (f self super);
-in
 {
   perSystem = { pkgs, lib, config, ... }: {
     haskellProjects.ghc810 = {
+      projectFlakeName = "nammayatri:common";
+
       # This is not a local project, so disable those options.
-      packages = { };
+      defaults.packages = {};
       devShell.enable = false;
       autoWire = [ ];
 
@@ -30,76 +17,155 @@ in
       # We can't use 884, because that's broken in nixpkgs. So 8.10 it is.
       basePackages = pkgs.haskell.packages.ghc8107;
 
-      source-overrides = {
-        # Dependencies from Hackage
-        aeson = "1.5.6.0";
-        dhall = "1.35.0";
-        esqueleto = "3.5.2.0";
-        geojson = "4.0.4";
-        hspec = "2.7.6";
-        hspec-core = "2.7.6";
-        hspec-discover = "2.7.6";
-        hspec-meta = "2.6.0";
-        http2 = "3.0.2";
-        jwt = "0.10.0";
-        lens = "4.19.2";
-        megaparsec = "9.0.0";
-        mmorph = "1.1.3";
-        openapi3 = "3.1.0";
-        optparse-applicative = "0.15.1.0";
-        servant = "0.18.3";
-        servant-client = "0.18.1";
-        servant-client-core = "0.18.1";
-        servant-docs = "0.11.7";
-        servant-foreign = "0.15.2";
-        servant-mock = "0.8.7";
-        servant-multipart = "0.12";
-        servant-openapi3 = "2.0.1.2";
-        servant-server = "0.18.1";
-        singletons = "2.6";
-        streamly = "0.7.3.1";
-        tasty-hspec = "1.1.6";
-        th-desugar = "1.10";
-        universum = "1.6.1";
+      # Dependencies from Hackage
+      packages = {
+        aeson.source = "1.5.6.0";
+        dhall.source = "1.35.0";
+        esqueleto.source = "3.5.2.0";
+        geojson.source = "4.0.4";
+        hspec.source = "2.7.6";
+        hspec-core.source = "2.7.6";
+        hspec-discover.source = "2.7.6";
+        hspec-meta.source = "2.6.0";
+        http2.source = "3.0.2";
+        jwt.source = "0.10.0";
+        lens.source = "4.19.2";
+        megaparsec.source = "9.0.0";
+        mmorph.source = "1.1.3";
+        openapi3.source = "3.1.0";
+        optparse-applicative.source = "0.15.1.0";
+        servant.source = "0.18.3";
+        servant-client.source = "0.18.1";
+        servant-client-core.source = "0.18.1";
+        servant-docs.source = "0.11.7";
+        servant-foreign.source = "0.15.2";
+        servant-mock.source = "0.8.7";
+        servant-multipart.source = "0.12";
+        servant-openapi3.source = "2.0.1.2";
+        servant-server.source = "0.18.1";
+        singletons.source = "2.6";
+        streamly.source = "0.7.3.1";
+        tasty-hspec.source = "1.1.6";
+        th-desugar.source = "1.10";
+        universum.source = "1.6.1";
       };
 
-      overrides = compilePipe (self: super: with pkgs.haskell.lib.compose; {
-        # NOTE: A lot of these overrides try to match
-        # https://www.stackage.org/lts-16.31 because that's what the project is
-        # mostly using. As we migrate to GHC 9.2, we can remove most of these.
-        aeson = [ doJailbreak ];
-        aeson-casing = [ dontCheck ];
-        amazonka-core = [ unmarkBroken dontCheck doJailbreak ];
-        binary-parsers = [ unmarkBroken ];
-        dhall = [ dontCheck doJailbreak ];
-        esqueleto = [ dontCheck ];
-        geojson = [ dontCheck ];
-        hex-text = [ dontCheck ];
-        http2 = [ dontCheck ];
-        jwt = [ dontCheck doJailbreak ];
-        lens = [ dontCheck doJailbreak ];
-        lrucaching = [ unmarkBroken ];
-        megaparsec = [ dontCheck doJailbreak ];
-        mmorph = [ doJailbreak ];
-        openapi3 = [ dontCheck doJailbreak ];
-        optparse-applicative = [ doJailbreak ];
-        prometheus-proc = [ unmarkBroken ];
-        servant = [ doJailbreak ];
-        servant-client = [ dontCheck doJailbreak ];
-        servant-client-core = [ dontCheck doJailbreak ];
-        servant-docs = [ dontCheck doJailbreak ];
-        servant-foreign = [ dontCheck doJailbreak ];
-        servant-mock = [ dontCheck doJailbreak ];
-        servant-multipart = [ dontCheck doJailbreak ];
-        servant-openapi3 = [ dontCheck doJailbreak ];
-        servant-server = [ dontCheck doJailbreak ];
-        singletons = [ dontCheck doJailbreak ];
-        streamly = [ dontCheck doJailbreak ];
-        th-desugar = [ dontCheck doJailbreak ];
-        tinylog = [ unmarkBroken ];
-        universum = [ dontCheck doJailbreak ];
-        word24 = [ unmarkBroken ];
-      });
+      # NOTE: A lot of these overrides try to match
+      # https://www.stackage.org/lts-16.31 because that's what the project is
+      # mostly using. As we migrate to GHC 9.2, we can remove most of these.
+      settings = {
+        aeson.jailbreak = true;
+        aeson-casing.check = false;
+        amazonka-core = {
+          broken = false;
+          check = false;
+          jailbreak = true;
+        };
+        binary-parsers = {
+          broken = false;
+        };
+        dhall = {
+          check = false;
+          jailbreak = true;
+        };
+        esqueleto = {
+          check = false;
+        };
+        geojson = {
+          check = false;
+        };
+        hex-text = {
+          check = false;
+        };
+        http2 = {
+          check = false;
+        };
+        jwt = {
+          check = false;
+          jailbreak = true;
+        };
+        lens = {
+          check = false;
+          jailbreak = true;
+        };
+        lrucaching = {
+          broken = false;
+        };
+        megaparsec = {
+          check = false;
+          jailbreak = true;
+        };
+        mmorph = {
+          jailbreak = true;
+        };
+        openapi3 = {
+          check = false;
+          jailbreak = true;
+        };
+        optparse-applicative = {
+          jailbreak = true;
+        };
+        prometheus-proc = {
+          broken = false;
+        };
+        servant = {
+          jailbreak = true;
+        };
+        servant-client = {
+          check = false;
+          jailbreak = true;
+        };
+        servant-client-core = {
+          check = false;
+          jailbreak = true;
+        };
+        servant-docs = {
+          check = false;
+          jailbreak = true;
+        };
+        servant-foreign = {
+          check = false;
+          jailbreak = true;
+        };
+        servant-mock = {
+          check = false;
+          jailbreak = true;
+        };
+        servant-multipart = {
+          check = false;
+          jailbreak = true;
+        };
+        servant-openapi3 = {
+          check = false;
+          jailbreak = true;
+        };
+        servant-server = {
+          check = false;
+          jailbreak = true;
+        };
+        singletons = {
+          check = false;
+          jailbreak = true;
+        };
+        streamly = {
+          check = false;
+          jailbreak = true;
+        };
+        th-desugar = {
+          check = false;
+          jailbreak = true;
+        };
+        tinylog = {
+          broken = false;
+        };
+        universum = {
+          check = false;
+          jailbreak = true;
+        };
+        word24 = {
+          broken = false;
+        };
+      };
     };
   };
 }
