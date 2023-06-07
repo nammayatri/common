@@ -8,7 +8,8 @@ common:
     common.inputs.haskell-flake.flakeModule
     (import ./nix/treefmt.nix common)
     ./nix/haskell
-    ./nix/ghc810.nix
+    # ./nix/ghc810.nix
+    ./nix/ghc927.nix
     ./nix/pre-commit.nix
     ./nix/arion.nix
     common.inputs.cachix-push.flakeModule
