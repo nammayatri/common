@@ -5,7 +5,7 @@
         ./no-global-cache.nix
         ./devtools.nix
       ];
-      basePackages = config.haskellProjects.ghc810.outputs.finalPackages;
+      basePackages = config.haskellProjects.ghc927.outputs.finalPackages;
     };
   };
 }
