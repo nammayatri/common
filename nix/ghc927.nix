@@ -3,26 +3,13 @@
 #
 # > basePackages = config.haskellProjects.ghc927.outputs.finalPackages;
 #
-{ self, lib, ... }:
-
-let
-  # A function that enables us to write `foo = [ dontCheck ]` instead of `foo =
-  # lib.pipe super.foo [ dontCheck ]` in haskell-flake's `overrides`.
-  compilePipe = f: self: super:
-    lib.mapAttrs
-      (name: value:
-        if lib.isList value then
-          lib.pipe super.${name} value
-        else
-          value
-      )
-      (f self super);
-in
 {
   perSystem = { pkgs, lib, config, ... }: {
     haskellProjects.ghc927 = {
+      projectFlakeName = "nammayatri:common";
+
       # This is not a local project, so disable those options.
-      packages = { };
+      defaults.packages = {};
       devShell.enable = false;
       autoWire = [ ];
 
@@ -36,18 +23,31 @@ in
 
       basePackages = pkgs.haskell.packages.ghc927;
 
-      source-overrides = {
+      packages = {
         # Dependencies from Hackage
 
       };
 
-      overrides = compilePipe (self: super: with pkgs.haskell.lib.compose; {
-        binary-parsers = [ unmarkBroken doJailbreak ];
-        mysql-haskell = [ doJailbreak ];
-        prometheus-proc = [ unmarkBroken doJailbreak ];
-        lrucaching = [ unmarkBroken doJailbreak ];
-        wire-streams = [doJailbreak];
-      });
+      settings = {
+        binary-parsers = {
+          broken = false;
+          jailbreak = true;
+        };
+        mysql-haskell = {
+          jailbreak = true;
+        };
+        prometheus-proc = {
+          broken = false;
+          jailbreak = true;
+        };
+        lrucaching = {
+          broken = false;
+          jailbreak = true;
+        };
+        wire-streams = {
+          jailbreak = true;
+        };
+      };
     };
   };
 }
