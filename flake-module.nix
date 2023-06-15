@@ -25,7 +25,5 @@ common:
       inherit system;
       config.allowUnfree = true;
     };
-
-    process-compose.configs = lib.mkDefault { };
   };
 }
