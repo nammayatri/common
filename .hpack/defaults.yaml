@@ -1,5 +1,8 @@
 # hpack defaults
 # Ref: https://github.com/sol/hpack#defaults
+
+# Workaround for segfault on macOS
+# https://github.com/NixOS/nixpkgs/issues/149692#issuecomment-1587564664
 when:
   - condition: os(darwin)
     ghc-options:
