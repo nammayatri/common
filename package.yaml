@@ -1,0 +1,6 @@
+# hpack defaults
+# Ref: https://github.com/sol/hpack#defaults
+when:
+  - condition: os(darwin)
+    ghc-options:
+      - -fwhole-archive-hs-libs
