@@ -9,7 +9,7 @@
       projectFlakeName = "nammayatri:common";
 
       # This is not a local project, so disable those options.
-      defaults.packages = {};
+      defaults.packages = { };
       devShell.enable = false;
       autoWire = [ ];
 
