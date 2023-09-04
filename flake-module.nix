@@ -24,6 +24,11 @@ common:
     _module.args.pkgs = import inputs.nixpkgs {
       inherit system;
       config.allowUnfree = true;
+      overlays = [
+        (self: super: {
+          hpack = super.callPackage ./nix/haskell/hpack.nix { inherit (super) hpack; };
+        })
+      ];
     };
   };
 }
