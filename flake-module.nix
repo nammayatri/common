@@ -26,7 +26,7 @@ common:
       config.allowUnfree = true;
       overlays = [
         (self: super: {
-          hpack = super.callPackage ./nix/haskell/hpack.nix { inherit (super) hpack; };
+          hpack = super.callPackage ./nix/haskell/hpack { inherit (super) hpack; };
         })
       ];
     };
