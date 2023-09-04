@@ -1,8 +1,8 @@
-{ self, config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   devShell.tools = hp: {
-    inherit (pkgs.haskellPackages)
+    inherit (pkgs)
       hpack
       ;
     inherit (hp)
