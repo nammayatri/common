@@ -3,6 +3,8 @@
 writeShellApplication {
   name = "hpack";
   text = ''
+    set -x
+    
     DIR=$(mktemp -d)
     cp "$1" "$DIR"/package.yaml
 
