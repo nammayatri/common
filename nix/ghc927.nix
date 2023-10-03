@@ -47,6 +47,14 @@
         wire-streams = {
           jailbreak = true;
         };
+        servant-foreign = {
+          broken = false;
+          jailbreak = true;
+        };
+        openapi3 = {
+          broken = false;
+          check = false;
+        };
       };
     };
   };
