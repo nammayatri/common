@@ -3,7 +3,3 @@
 
 # Workaround for segfault on macOS
 # https://github.com/NixOS/nixpkgs/issues/149692#issuecomment-1587564664
-when:
-  - condition: os(darwin)
-    ghc-options:
-      - -fwhole-archive-hs-libs
