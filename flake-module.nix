@@ -28,6 +28,9 @@ common:
       # Note:-
       # Temporarily allow nodejs14, just to advance with testing build purposes.
       # DO NOT DEPLOY OR MERGE THIS, IT IS INSECURE!
+      #
+      # UPDATE on Note:-
+      #   The Frontend team will take up the nodejs upgrade separately
       config.permittedInsecurePackages = [
         "nodejs-14.21.3"
         "openssl-1.1.1w"
