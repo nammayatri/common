@@ -12,6 +12,11 @@
     treefmt-nix.url = "github:numtide/treefmt-nix";
     cachix-push.url = "github:juspay/cachix-push";
 
+    # Rust
+    rust-overlay.url = "github:oxalica/rust-overlay";
+    crane.url = "github:ipetkov/crane";
+    crane.inputs.nixpkgs.follows = "nixpkgs";
+
     # Commonly useful flakes
     mission-control.url = "github:Platonic-Systems/mission-control";
     process-compose-flake.url = "github:Platonic-Systems/process-compose-flake";
