@@ -16,6 +16,7 @@ Nix-based project configuration shared between nammayatri repositories
   - Flake app (`nix run .#cachix-push`) to push outputs to cachix, until we [automate it in CI](https://github.com/juspay/jenkins-nix-ci/issues/18).
   - Language specific features
     - Rust: crane and rust-overlay
+    - Python: extra Python packages
     - Haskell
       - ~~GHC 8.10 package set (matching LTS 16.31 in part)~~ (DEPRECATED, file and references kept for posterity only)
       - GHC 9.2.7 package set
