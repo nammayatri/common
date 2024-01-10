@@ -10,6 +10,7 @@ Nix-based project configuration shared between nammayatri repositories
   - Automatic importing of the common flakeModule.
 - The common flakeModule provides:
   - treefmt-based autoformatters: ormolu, hlint, dhall-format, nixpkgs-fmt
+  - Extra Python packages
   - Common Haskell configuration
     - ~~GHC 8.10 package set (matching LTS 16.31 in part)~~ (DEPRECATED, file and references kept for posterity only)
     - GHC 9.2.7 package set
