@@ -10,13 +10,15 @@ Nix-based project configuration shared between nammayatri repositories
   - Automatic importing of the common flakeModule.
 - The common flakeModule provides:
   - treefmt-based autoformatters: ormolu, hlint, dhall-format, nixpkgs-fmt
-  - Extra Python packages
-  - Common Haskell configuration
-    - ~~GHC 8.10 package set (matching LTS 16.31 in part)~~ (DEPRECATED, file and references kept for posterity only)
-    - GHC 9.2.7 package set
-    - Avoid global tool caches (`no-global-cache.nix`)
-    - Common `package.yaml` (hpack) configuration
   - `mission-control`
   - `process-compose-flake`
   - pre-commit hooks
   - Flake app (`nix run .#cachix-push`) to push outputs to cachix, until we [automate it in CI](https://github.com/juspay/jenkins-nix-ci/issues/18).
+  - Language specific features
+    - Rust: crane and rust-overlay
+    - Python: extra Python packages
+    - Haskell
+      - ~~GHC 8.10 package set (matching LTS 16.31 in part)~~ (DEPRECATED, file and references kept for posterity only)
+      - GHC 9.2.7 package set
+      - Avoid global tool caches (`no-global-cache.nix`)
+      - Common `package.yaml` (hpack) configuration

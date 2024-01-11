@@ -36,6 +36,7 @@ common:
         "openssl-1.1.1w"
       ];
       overlays = [
+        common.inputs.rust-overlay.overlays.default
         (self: super: {
           hpack = super.callPackage ./nix/haskell/hpack { inherit (super) hpack; };
           python310 = super.python310.override {
