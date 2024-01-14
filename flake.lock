@@ -198,6 +198,21 @@
       }
     },
     "flake-utils_3": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_4": {
       "inputs": {
         "systems": "systems"
       },
@@ -512,6 +527,22 @@
     },
     "nixpkgs_5": {
       "locked": {
+        "lastModified": 1701985094,
+        "narHash": "sha256-SrEEAeDvsdehVrvoq47pGFZ+p/QbUcTovL84S7tn6Sk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a24421da00be9ebfdade97135db98a1fac5173d4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "release-23.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_6": {
+      "locked": {
         "lastModified": 1681358109,
         "narHash": "sha256-eKyxW4OohHQx9Urxi7TQlFBTDWII+F+x2hklDOQPB50=",
         "owner": "NixOS",
@@ -526,7 +557,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1680945546,
         "narHash": "sha256-8FuaH5t/aVi/pR1XxnF0qi4WwMYC+YxlfdsA0V+TEuQ=",
@@ -596,6 +627,25 @@
         "type": "github"
       }
     },
+    "process-compose": {
+      "inputs": {
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "lastModified": 1705188742,
+        "narHash": "sha256-yOBC9Lz0oyvgwZdBnkuYcFF24dx7YMOKJnwQ8msi6Mg=",
+        "owner": "F1bonacc1",
+        "repo": "process-compose",
+        "rev": "363b0af699d1f34511f0f908016a6484ddf42ac5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "F1bonacc1",
+        "repo": "process-compose",
+        "type": "github"
+      }
+    },
     "process-compose-flake": {
       "locked": {
         "lastModified": 1704892628,
@@ -623,6 +673,7 @@
         "nixpkgs-140774-workaround": "nixpkgs-140774-workaround",
         "nixpkgs-21_11": "nixpkgs-21_11",
         "pre-commit-hooks-nix": "pre-commit-hooks-nix",
+        "process-compose": "process-compose",
         "process-compose-flake": "process-compose-flake",
         "rust-overlay": "rust-overlay",
         "systems": "systems_2",
@@ -631,8 +682,8 @@
     },
     "rust-overlay": {
       "inputs": {
-        "flake-utils": "flake-utils_3",
-        "nixpkgs": "nixpkgs_5"
+        "flake-utils": "flake-utils_4",
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1704766659,
@@ -680,7 +731,7 @@
     },
     "treefmt-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": "nixpkgs_7"
       },
       "locked": {
         "lastModified": 1682536470,

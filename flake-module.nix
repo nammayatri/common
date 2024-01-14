@@ -42,6 +42,7 @@ common:
           python310 = super.python310.override {
             packageOverrides = self.callPackage ./nix/python310/overrides.nix {};
           };
+          process-compose = common.inputs.process-compose.packages.${system}.process-compose;
         })
       ];
     };
