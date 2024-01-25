@@ -21,7 +21,7 @@
       # specific GHC version and by extension the related
       # packages versions that come with this snapshot
 
-      basePackages = pkgs.haskell.packages.ghc927;
+      basePackages = pkgs.haskellPackages;
 
       packages = {
         # Dependencies from Hackage
