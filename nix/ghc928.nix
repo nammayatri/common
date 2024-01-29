@@ -25,7 +25,7 @@
 
       packages = {
         # Dependencies from Hackage
-
+        persistent.source = "2.14.5.2";
       };
 
       settings = {
