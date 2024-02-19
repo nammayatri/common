@@ -7,7 +7,7 @@
   perSystem = { pkgs, lib, config, ... }: {
     haskellProjects.ghc810 = {
       projectFlakeName = "nammayatri:common";
-      projectRoot = ../;
+      projectRoot = ../.;
 
       # This is not a local project, so disable those options.
       defaults.packages = { };
