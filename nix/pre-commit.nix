@@ -14,6 +14,7 @@
           # FIXME: Disabled due to purity issues
           # nix-flake-lock.enable = true;
           statix.enable = lib.mkDefault true;
+          commitizen.enable = true;
 
           # Custom hooks
           trailing-ws = {
