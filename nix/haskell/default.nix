@@ -6,14 +6,14 @@
         ./devtools.nix
       ];
       basePackages = config.haskellProjects.ghc927.outputs.finalPackages;
-      defaults.settings.default = { name, package, config, ... }:
-        lib.optionalAttrs (package.local.toDefinedProject or false) {
-          # Disabling haddock and profiling is mainly to speed up Nix builds.
-          haddock = lib.mkDefault false;
-          # Avoid double-compilation.
-          libraryProfiling = lib.mkDefault false;
-          separateBinOutput = package.cabal.executables != [ ];
-        };
+      defaults.settings.defined = { name, package, config, ... }: {
+        # Disabling haddock and profiling is mainly to speed up Nix builds.
+        haddock = lib.mkDefault false;
+        # Avoid double-compilation.
+        libraryProfiling = lib.mkDefault false;
+        buildFromSdist = lib.mkDefault true; # Ensure release-worthiness
+        separateBinOutput = package.cabal.executables != [ ];
+      };
     };
   };
 }
