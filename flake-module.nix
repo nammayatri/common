@@ -44,7 +44,7 @@ common:
             packageOverrides = self.callPackage ./nix/python310/overrides.nix {};
           };
           process-compose = common.inputs.process-compose.packages.${system}.process-compose;
-          nix-health = common.inputs.nix-health.packages.${system}.nix-health;
+          nix-health = common.inputs.nix-health.packages.${system}.default;
         })
       ];
     };
