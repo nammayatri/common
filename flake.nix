@@ -11,6 +11,7 @@
     nixpkgs-140774-workaround.url = "github:srid/nixpkgs-140774-workaround";
     treefmt-nix.url = "github:numtide/treefmt-nix";
     cachix-push.url = "github:juspay/cachix-push";
+    nix-health.url = "github:juspay/nix-health?dir=module";
 
     # Rust
     rust-overlay.url = "github:oxalica/rust-overlay";

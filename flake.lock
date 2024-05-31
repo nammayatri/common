@@ -364,6 +364,23 @@
         "type": "github"
       }
     },
+    "nix-health": {
+      "locked": {
+        "dir": "module",
+        "lastModified": 1717084565,
+        "narHash": "sha256-zB6eDFFecSHEm6JKXeMDFIzsPICODAsUas/nHWOedkY=",
+        "owner": "juspay",
+        "repo": "nix-health",
+        "rev": "d83c80c022034b646e84df08b4d591b1f8af7832",
+        "type": "github"
+      },
+      "original": {
+        "dir": "module",
+        "owner": "juspay",
+        "repo": "nix-health",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1677534593,
@@ -669,6 +686,7 @@
         "flake-root": "flake-root",
         "haskell-flake": "haskell-flake",
         "mission-control": "mission-control",
+        "nix-health": "nix-health",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-140774-workaround": "nixpkgs-140774-workaround",
         "nixpkgs-21_11": "nixpkgs-21_11",

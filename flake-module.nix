@@ -6,6 +6,7 @@ common:
   imports = [
     common.inputs.flake-root.flakeModule
     common.inputs.haskell-flake.flakeModule
+    common.inputs.nix-health.flakeModule
     (import ./nix/treefmt.nix common)
     ./nix/haskell
     # ./nix/ghc810.nix
