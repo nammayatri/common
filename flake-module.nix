@@ -45,6 +45,7 @@ common:
           };
           process-compose = common.inputs.process-compose.packages.${system}.process-compose;
           nix-health = common.inputs.nix-health.packages.${system}.default;
+          osrm-backend = common.inputs.nixpkg-latest.legacyPackages.${system}.osrm-backend;
         })
       ];
     };
