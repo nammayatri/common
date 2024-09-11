@@ -19,7 +19,12 @@ common:
     common.inputs.pre-commit-hooks-nix.flakeModule
   ];
   perSystem = { system, inputs', lib, ... }: {
-    cachix-push.cacheName = "nammayatri";
+    cachix-push = {
+      cacheName = "nammayatri";
+      pathsToPush = lib.mkDefault {
+        devshell = self'.devShells.default;
+      };
+    };
 
     # Remove this after fixing
     # https://github.com/nammayatri/nammayatri/issues/13
