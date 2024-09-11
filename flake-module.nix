@@ -20,6 +20,7 @@ common:
   ];
   perSystem = { self', system, inputs', lib, ... }: {
     cachix-push = {
+      package = common.inputs.nixpkgs-latest.legacyPackages.${system}.cachix;
       cacheName = "nammayatri";
       pathsToCache = lib.mkDefault {
         devshell = self'.devShells.default;
