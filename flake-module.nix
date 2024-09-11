@@ -23,7 +23,8 @@ common:
       package = common.inputs.nixpkgs-latest.legacyPackages.${system}.cachix;
       cacheName = "nammayatri";
       pathsToCache = lib.mkDefault {
-        devshell = self'.devShells.default;
+        # Using devShell' `name` here (expecting it to be unique), so we can support multiple repos.
+        ${self'.devShells.default.name} = self'.devShells.default;
       };
     };
 
