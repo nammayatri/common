@@ -18,7 +18,7 @@ common:
     common.inputs.process-compose-flake.flakeModule
     common.inputs.pre-commit-hooks-nix.flakeModule
   ];
-  perSystem = { system, inputs', lib, ... }: {
+  perSystem = { self', system, inputs', lib, ... }: {
     cachix-push = {
       cacheName = "nammayatri";
       pathsToPush = lib.mkDefault {
