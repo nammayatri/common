@@ -21,7 +21,7 @@ common:
   perSystem = { self', system, inputs', lib, ... }: {
     cachix-push = {
       cacheName = "nammayatri";
-      pathsToPush = lib.mkDefault {
+      pathsToCache = lib.mkDefault {
         devshell = self'.devShells.default;
       };
     };
