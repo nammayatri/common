@@ -2,11 +2,11 @@
   "nodes": {
     "cachix-push": {
       "locked": {
-        "lastModified": 1725458890,
-        "narHash": "sha256-iTrvLuPBlLhtTsM4jKbFBM+a4M6HKWt1O/ch9mUMjDw=",
+        "lastModified": 1726080112,
+        "narHash": "sha256-OcmKmI5lO6ZcJNdZkWK5ObauO8YyazG3nBqGlwC9Y+0=",
         "owner": "juspay",
         "repo": "cachix-push",
-        "rev": "2f3f51cf377824d39d5cae53f24e07fedd921ede",
+        "rev": "8ed534b817ab110387ff3bc95c211f668d7ccf2f",
         "type": "github"
       },
       "original": {
