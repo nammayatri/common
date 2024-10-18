@@ -18,6 +18,14 @@ common:
       # programs.hlint.enable = true;
       programs.ormolu.enable = true;
 
+      programs.yamlfmt.enable = true;
+      settings.formatter.yamlfmt = {
+        options = [
+          "retain_line_breaks=true"
+          "trim_trailing_whitespace=true"
+        ];
+      };
+
       programs.ormolu.package =
         let pkgs-21_11 = common.inputs.nixpkgs-21_11.legacyPackages.${system};
         in common.inputs.nixpkgs-140774-workaround.patch pkgs-21_11 pkgs-21_11.haskellPackages.ormolu;
