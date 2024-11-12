@@ -6,7 +6,6 @@ common:
   imports = [
     common.inputs.flake-root.flakeModule
     common.inputs.haskell-flake.flakeModule
-    common.inputs.nix-health.flakeModule
     (import ./nix/treefmt.nix common)
     ./nix/haskell
     # ./nix/ghc810.nix
@@ -51,7 +50,6 @@ common:
             packageOverrides = self.callPackage ./nix/python310/overrides.nix {};
           };
           process-compose = common.inputs.process-compose.packages.${system}.process-compose;
-          nix-health = common.inputs.nix-health.packages.${system}.default;
           osrm-backend = common.inputs.nixpkgs-latest.legacyPackages.${system}.osrm-backend;
         })
       ];
