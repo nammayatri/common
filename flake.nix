@@ -11,7 +11,6 @@
     nixpkgs-21_11.url = "github:nixos/nixpkgs/nixos-21.11"; # Used for ormolu
     nixpkgs-140774-workaround.url = "github:srid/nixpkgs-140774-workaround";
     treefmt-nix.url = "github:numtide/treefmt-nix";
-    cachix-push.url = "github:juspay/cachix-push";
 
     # Rust
     rust-overlay.url = "github:oxalica/rust-overlay";

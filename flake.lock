@@ -1,20 +1,5 @@
 {
   "nodes": {
-    "cachix-push": {
-      "locked": {
-        "lastModified": 1726080112,
-        "narHash": "sha256-OcmKmI5lO6ZcJNdZkWK5ObauO8YyazG3nBqGlwC9Y+0=",
-        "owner": "juspay",
-        "repo": "cachix-push",
-        "rev": "8ed534b817ab110387ff3bc95c211f668d7ccf2f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "juspay",
-        "repo": "cachix-push",
-        "type": "github"
-      }
-    },
     "crane": {
       "inputs": {
         "nixpkgs": [
@@ -396,7 +381,6 @@
     },
     "root": {
       "inputs": {
-        "cachix-push": "cachix-push",
         "crane": "crane",
         "flake-parts": "flake-parts",
         "flake-root": "flake-root",

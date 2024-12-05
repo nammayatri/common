@@ -13,7 +13,6 @@ Nix-based project configuration shared between nammayatri repositories
   - `mission-control`
   - `process-compose-flake`
   - pre-commit hooks
-  - Flake app (`nix run .#cachix-push`) to push outputs to cachix, until we [automate it in CI](https://github.com/juspay/jenkins-nix-ci/issues/18).
   - Language specific features
     - Rust: crane and rust-overlay
     - Python: extra Python packages

@@ -12,21 +12,11 @@ common:
     ./nix/ghc927.nix
     ./nix/pre-commit.nix
     ./nix/arion.nix
-    common.inputs.cachix-push.flakeModule
     common.inputs.mission-control.flakeModule
     common.inputs.process-compose-flake.flakeModule
     common.inputs.pre-commit-hooks-nix.flakeModule
   ];
   perSystem = { self', system, inputs', lib, ... }: {
-    cachix-push = {
-      package = common.inputs.nixpkgs-latest.legacyPackages.${system}.cachix;
-      cacheName = "nammayatri";
-      pathsToCache = lib.mkDefault {
-        # Using devShell' `name` here (expecting it to be unique), so we can support multiple repos.
-        ${self'.devShells.default.name} = self'.devShells.default;
-      };
-    };
-
     # Remove this after fixing
     # https://github.com/nammayatri/nammayatri/issues/13
     _module.args.pkgs = import inputs.nixpkgs {
