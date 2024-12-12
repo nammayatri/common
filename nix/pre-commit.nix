@@ -1,14 +1,22 @@
 # https://pre-commit.com/ hooks defined in Nix
 # cf. https://github.com/cachix/pre-commit-hooks.nix
-{ ... }:
+{ inputs, ... }:
 
 {
-  perSystem = { pkgs, lib, ... }: {
+  perSystem = { pkgs, lib, system, config, ... }: {
     pre-commit = {
+      pkgs = inputs.common.inputs.nixpkgs-latest.legacyPackages.${system};
       check.enable = true;
       settings = {
         hooks = {
-          treefmt.enable = true;
+          treefmt = {
+            enable = true;
+            excludes = [ config.pre-commit.settings.hooks.cabal2nix.settings.output_filename ];
+          };
+          cabal2nix = {
+            enable = true;
+            settings.output_filename = "cabal.nix";
+          };
           nil.enable = lib.mkDefault true;
           hpack.enable = true;
           # FIXME: Disabled due to purity issues
