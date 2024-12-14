@@ -317,11 +317,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1733744945,
-        "narHash": "sha256-IKEqpBW4mxRxVIu2EOJldp7gJYwxBN+yNZxoW0QhP2w=",
+        "lastModified": 1734208789,
+        "narHash": "sha256-DncCAT2wHz/bilz8k4eiv7a/v39j5xUU4Ri6KrlOnO0=",
         "owner": "rsrohitsingh682",
         "repo": "git-hooks.nix",
-        "rev": "be16516ddd761e03509849c2d037925f826740cc",
+        "rev": "3e13b6781019cdecea43c9e001aa1d63fdca259d",
         "type": "github"
       },
       "original": {
