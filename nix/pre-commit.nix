@@ -15,7 +15,6 @@
           };
           cabal2nix = {
             enable = true;
-            after = [ "hpack" ];
             settings.output_filename = "cabal.nix";
           };
           nil.enable = lib.mkDefault true;
