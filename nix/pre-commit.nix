@@ -11,11 +11,11 @@
         hooks = {
           treefmt = {
             enable = true;
-            excludes = [ config.pre-commit.settings.hooks.cabal2nix.settings.output_filename ];
+            excludes = [ config.pre-commit.settings.hooks.cabal2nix.settings.outputFilename ];
           };
           cabal2nix = {
             enable = true;
-            settings.output_filename = "cabal.nix";
+            settings.outputFilename = "cabal.nix";
           };
           nil.enable = lib.mkDefault true;
           hpack.enable = true;

@@ -20,7 +20,7 @@
     # Commonly useful flakes
     mission-control.url = "github:Platonic-Systems/mission-control";
     process-compose-flake.url = "github:Platonic-Systems/process-compose-flake";
-    pre-commit-hooks-nix.url = "github:rsrohitsingh682/git-hooks.nix/cabal2nix";
+    pre-commit-hooks-nix.url = "github:cachix/git-hooks.nix";
 
 
     # Packages not in nixpkgs; or out of date in nixpkgs.
