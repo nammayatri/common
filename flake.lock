@@ -85,12 +85,15 @@
       }
     },
     "flake-utils_2": {
+      "inputs": {
+        "systems": "systems"
+      },
       "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
         "type": "github"
       },
       "original": {
@@ -101,7 +104,7 @@
     },
     "flake-utils_3": {
       "inputs": {
-        "systems": "systems"
+        "systems": "systems_2"
       },
       "locked": {
         "lastModified": 1681202837,
@@ -277,16 +280,16 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1701985094,
-        "narHash": "sha256-SrEEAeDvsdehVrvoq47pGFZ+p/QbUcTovL84S7tn6Sk=",
+        "lastModified": 1756210361,
+        "narHash": "sha256-WjjCWf8MRtfoPUXC0rb6reRhqPXfUCo2dLjfjim0sMA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a24421da00be9ebfdade97135db98a1fac5173d4",
+        "rev": "ad9e105a159b53904e7f6eacf6743e999eee46c6",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "release-23.11",
+        "ref": "release-25.05",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -351,11 +354,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1705188742,
-        "narHash": "sha256-yOBC9Lz0oyvgwZdBnkuYcFF24dx7YMOKJnwQ8msi6Mg=",
+        "lastModified": 1758316135,
+        "narHash": "sha256-+r5l5OOndywrPqr+XRMPHudN+LBIxDsIEY07+vgVlk0=",
         "owner": "F1bonacc1",
         "repo": "process-compose",
-        "rev": "363b0af699d1f34511f0f908016a6484ddf42ac5",
+        "rev": "d83409b3216099ee15c5825cf8413eb94c79ffd6",
         "type": "github"
       },
       "original": {
@@ -394,7 +397,7 @@
         "process-compose": "process-compose",
         "process-compose-flake": "process-compose-flake",
         "rust-overlay": "rust-overlay",
-        "systems": "systems_2",
+        "systems": "systems_3",
         "treefmt-nix": "treefmt-nix"
       }
     },
@@ -433,6 +436,21 @@
       }
     },
     "systems_2": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_3": {
       "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
