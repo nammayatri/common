@@ -44,5 +44,7 @@ common:
         })
       ];
     };
+
+    process-compose = lib.mkDefault {};
   };
 }
