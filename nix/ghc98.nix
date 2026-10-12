@@ -85,6 +85,9 @@
           broken = false;
           jailbreak = true;
         };
+        unix-memory = {
+          check = false;
+        };
       };
     };
   };
