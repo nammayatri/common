@@ -16,9 +16,10 @@
       haskell-language-server = (
         pkgs.haskell.lib.compose.disableCabalFlag "fourmolu"
           (pkgs.haskell.lib.compose.disableCabalFlag "ormolu" hp.haskell-language-server)
-      ).override {
-      hls-ormolu-plugin = null;
-      hls-fourmolu-plugin = null;
-    };
+      );
+    #   ).override {
+    #   hls-ormolu-plugin = null;
+    #   hls-fourmolu-plugin = null;
+    # };
   };
 }
