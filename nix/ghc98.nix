@@ -63,7 +63,16 @@
         tcp-streams = {
           broken = false;
           jailbreak = true;
+
+          # extraBuildDepends = [ self.crypton-x509-system ];
+          custom = drv: pkgs.haskell.lib.overrideCabal drv (old: {
+            postPatch = (old.postPatch or "") + ''
+              sed -i -E 's/\bx509(-store|-system)?\b/crypton-x509\1/g' tcp-streams.cabal
+            '';
+          });
+
         };
+
         # remove this dependency?
         record-dot-preprocessor = {
           broken = false;
