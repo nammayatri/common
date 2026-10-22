@@ -10,7 +10,8 @@ common:
     (import ./nix/treefmt.nix common)
     ./nix/haskell
     # ./nix/ghc810.nix
-    ./nix/ghc927.nix
+    # ./nix/ghc927.nix
+    ./nix/ghc98.nix
     ./nix/pre-commit.nix
     ./nix/arion.nix
     common.inputs.cachix-push.flakeModule
