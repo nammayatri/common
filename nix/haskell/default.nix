@@ -5,7 +5,7 @@
         ./no-global-cache.nix
         ./devtools.nix
       ];
-      basePackages = config.haskellProjects.ghc927.outputs.finalPackages;
+      basePackages = config.haskellProjects.ghc98.outputs.finalPackages;
       defaults.settings.defined = { name, package, config, ... }: {
         # Disabling haddock and profiling is mainly to speed up Nix builds.
         haddock = lib.mkDefault false;
