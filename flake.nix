@@ -1,7 +1,8 @@
 {
   inputs = {
     # nixpkgs is not used in 'common', it is shared with repos that use common.
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    # Pin for GHC 9.8.4: this rev provides haskell.packages.ghc98.
+    nixpkgs.url = "github:nixos/nixpkgs/8edc0c72e3a38faf5434e40d1f19431125fe4b30";
     nixpkgs-latest.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -29,7 +30,8 @@
     flakeModules = {
       default = import ./flake-module.nix { inherit inputs; };
       # ghc810 = ./nix/ghc810.nix;
-      ghc927 = ./nix/ghc927.nix;
+      # ghc927 = ./nix/ghc927.nix;
+      ghc98 = ./nix/ghc98.nix;
     };
 
     lib.mkFlake = args: mod:
